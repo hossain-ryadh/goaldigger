@@ -1,0 +1,7 @@
+{
+  "name": "goaldigger",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
