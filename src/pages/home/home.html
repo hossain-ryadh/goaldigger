@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
@@ -14,4 +15,20 @@
     Take a look at the <code>src/pages/</code> directory to add or change tabs,
     update any existing page or create new pages.
   </p>
+
+    <ion-item>
+      <ion-label>Goal Name  </ion-label>
+        <ion-input floating type="text" placeholder="Add item" [(ngModel)]="goalName" ></ion-input>
+    </ion-item>
+    <button ion-button (click)="save(goalName)" > Save </button>
+
+<!-- List of Input Items -->
+<ion-list>
+  <ion-item>
+    <ion-label>{{ goalName }}</ion-label>
+  </ion-item>
+
+</ion-list>
+
+
 </ion-content>

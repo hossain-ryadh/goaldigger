@@ -1,3 +1,160 @@
 page-home {
+  body {
+    background-image: url("bg.jpg");
+    background-color: #cccccc;
+    color: #333;
+    font-family: Lato, sans-serif;
+
+  }
+  header, footer {
+    text-align: center;
+  }
+  .container {
+    display: block;
+    width: 500px;
+    margin: 10px auto 30px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li * {
+    float: left;
+  }
+  li, h3 {
+    clear:both;
+    list-style:none;
+  }
+  input, button {
+    outline: none;
+  }
+  button {
+     border: 3px solid #dedede;
+     background: #db2a0b;
+     background: -webkit-gradient(linear, left top, left bottom, from(#a14310), to(#db2a0b));
+     background: -webkit-linear-gradient(top, #a14310, #db2a0b);
+     background: -moz-linear-gradient(top, #a14310, #db2a0b);
+     background: -ms-linear-gradient(top, #a14310, #db2a0b);
+     background: -o-linear-gradient(top, #a14310, #db2a0b);
+     background-image: -ms-linear-gradient(top, #a14310 0%, #db2a0b 100%);
+     padding: 3.5px 7px;
+     -webkit-border-radius: 28px;
+     -moz-border-radius: 28px;
+     border-radius: 28px;
+     -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     text-shadow: #cc8ac4 0 1px 0;
+     color: #02cfc5;
+     font-size: 22px;
+     font-family: helvetica, serif;
+     text-decoration: none;
+     vertical-align: middle;
+     }
+  button:hover {
+     border: 3px solid #0a3c59;
+     text-shadow: #1e4158 0 1px 0;
+     background: #3fc425;
+     background: -webkit-gradient(linear, left top, left bottom, from(#19e838), to(#3fc425));
+     background: -webkit-linear-gradient(top, #19e838, #3fc425);
+     background: -moz-linear-gradient(top, #19e838, #3fc425);
+     background: -ms-linear-gradient(top, #19e838, #3fc425);
+     background: -o-linear-gradient(top, #19e838, #3fc425);
+     background-image: -ms-linear-gradient(top, #19e838 0%, #3fc425 100%);
+     color: #ffffff;
+     }
+  button:active {
+     text-shadow: #1e4158 0 1px 0;
+     border: 3px solid #0a3c59;
+     background: #65a9d7;
+     background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3fc425));
+     background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+     background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+     background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+     background: -o-linear-gradient(top, #3e779d, #65a9d7);
+     background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+     color: #fff;
+     }
+  h3,
+  label[for='new-task'] {
+    color: #333;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #333;
+    padding: 30px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+  }
+  input[type="text"]:focus {
+    color: #333;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+  }
+  input#new-task {
+    float: left;
+    width: 318px;
+  }
+  p > button:hover {
+    color: #0FC57C;
+  }
+
+  li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+  }
+  li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+  }
+  li >  input[type="text"] {
+    width: 226px;
+  }
+  li > .delete:hover {
+    color: #CF2323;
+  }
+
+  #completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+  ul li input[type=text] {
+    display:none;
+  }
+
+  ul li.editMode input[type=text] {
+    display:block;
+  }
+
+  ul li.editMode label {
+    display:none;
+  }
 
 }
