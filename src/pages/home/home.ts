@@ -1,6 +1,8 @@
+
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import * as './home';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,18 +11,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  goalName: string;
-  constructor(public navCtrl: NavController) {
+  itemsData: Observable<any>;
+
+  constructor(public navCtrl: NavController,
+    private database:  AngularFireDatabase) {
 
   }
-
-  addNewitem(){
-
+  ionViewDidLoad(){
+    this.itemsData = this.database.object(`/items/topics`).valueChanges();
   }
-
-  save(goalName){
-
-    console.log(goalName)
+  ionViewWillEnter(){
+    this.itemsData = this.database.object(`/items/topics`).valueChanges();
   }
 
 }

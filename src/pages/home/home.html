@@ -6,19 +6,13 @@
 </ion-header>
 
 <ion-content padding>
-
-  <ion-list>
-    <ion-item color="{{ excolor }}" >
-      <ion-label>  [ exercise ] </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>  [ Drink water ] </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>  [ Study ] </ion-label>
-    </ion-item>
-
-    </ion-list>
+<ion-item-divider color="{{ (itemsData | async )?.excolor }}"  >
+  <ion-item> Exercise </ion-item>
+  <ion-item>{{ (itemsData | async )?.goals }} </ion-item>
+  <ion-item>{{ (itemsData | async )?.period }} </ion-item>
+  <ion-item>{{ (itemsData | async )?.timeStarts }}</ion-item>
+  <ion-item>{{ (itemsData | async )?.timeEnds }} </ion-item>
+</ion-item-divider>
 
 
 </ion-content>

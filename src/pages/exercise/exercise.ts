@@ -1,4 +1,6 @@
-import { AngularFireDatabase,AngularFireList } from 'angularfire2/database';
+
+import { Exercise } from './exercise.model';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
@@ -11,30 +13,26 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class ExercisePage {
 
-  data: AngularFireList<any>;
+  exercise  = {} as Exercise;
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private viewCtrl:  ViewController,
     public database: AngularFireDatabase) {
-      this.data = database.list(`plan/planned`);
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExercisePage');
   }
 
-  uploadItems(goals,period,timeStarts,timeEnds,excolor){
-
-    this.data.push({
-      goals: goals,
-      period: period,
-      timeStarts: timeStarts,
-      timeEnds: timeEnds,
-      excolor: excolor
-     }).then(newData =>
-      this.viewCtrl.dismiss()
-     )
+  uploadItems(exercise){
+    this.database.object(`/items/topics`).set(this.exercise);
   }
+  dismiss(){
+    this.viewCtrl.dismiss();
+  }
+
 
 
 }

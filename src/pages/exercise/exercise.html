@@ -11,7 +11,7 @@
   <ion-list>
       <ion-item>
         <ion-label>Goals</ion-label>
-        <ion-select [(ngModel)]="goals">
+        <ion-select [(ngModel)]="exercise.goals">
           <ion-option value="1">1 times</ion-option>
           <ion-option value="2">2 times</ion-option>
           <ion-option value="3">3 times</ion-option>
@@ -25,7 +25,7 @@
   <ion-list>
       <ion-item>
         <ion-label>Time Period</ion-label>
-        <ion-select [(ngModel)]="period">
+        <ion-select [(ngModel)]="exercise.period">
           <ion-option value="1">per day</ion-option>
           <ion-option value="2">per week</ion-option>
           <ion-option value="3">per month</ion-option>
@@ -37,20 +37,20 @@
   <ion-list>
       <ion-item>
           <ion-label>Start Time</ion-label>
-          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStarts"></ion-datetime>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="exercise.timeStarts"></ion-datetime>
         </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-item>
         <ion-label>End Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeEnds"></ion-datetime>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="exercise.timeEnds"></ion-datetime>
       </ion-item>
   </ion-list>
 
   <ion-item>
     <ion-label>Select Color</ion-label>
-    <ion-select [(ngModel)]="excolor" multiple="false" >
+    <ion-select [(ngModel)]="exercise.excolor" multiple="false" >
       <ion-option value="primary" >blue</ion-option>
       <ion-option value="secondary" >green</ion-option>
       <ion-option value="danger" > red</ion-option>
@@ -60,7 +60,7 @@
   </ion-item>
 
 
-  <button item-end ion-button (click)="uploadItems(goals,period,timeStarts,timeEnds,excolor)"> Save </button>
+  <button item-end ion-button (click)="uploadItems(); dismiss()"> Save </button>
 
 
 
