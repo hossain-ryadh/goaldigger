@@ -1,9 +1,8 @@
-import { AdditemPage } from './../additem/additem';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AddgoalPage page.
+ * Generated class for the AdditemPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-addgoal',
-  templateUrl: 'addgoal.html',
+  selector: 'page-additem',
+  templateUrl: 'additem.html',
 })
-export class AddgoalPage {
+export class AdditemPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddgoalPage');
-  }
-
-
-  goToOtherPage(){
-    this.navCtrl.push(AdditemPage);
+    console.log('ionViewDidLoad AdditemPage');
   }
 
 }

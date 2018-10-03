@@ -17,6 +17,9 @@ export class LoginPage {
   }
 
   login(){
+
+    // login through database auth.
+
     this.navCtrl.push(TabsPage);
   }
 
