@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Exercise</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        <ion-label>Goals</ion-label>
+        <ion-select [(ngModel)]="goals">
+          <ion-option value="1">1 times</ion-option>
+          <ion-option value="2">2 times</ion-option>
+          <ion-option value="3">3 times</ion-option>
+          <ion-option value="4">4 times</ion-option>
+          <ion-option value="5">5 times</ion-option>
+          <ion-option value="6">6 times</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+  <ion-list>
+      <ion-item>
+        <ion-label>Time Period</ion-label>
+        <ion-select [(ngModel)]="period">
+          <ion-option value="1">per day</ion-option>
+          <ion-option value="2">per week</ion-option>
+          <ion-option value="3">per month</ion-option>
+
+        </ion-select>
+      </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item>
+          <ion-label>Start Time</ion-label>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStarts"></ion-datetime>
+        </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+        <ion-label>End Time</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeEnds"></ion-datetime>
+      </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Select Color</ion-label>
+    <ion-select [(ngModel)]="excolor" multiple="false" >
+      <ion-option value="primary" >blue</ion-option>
+      <ion-option value="secondary" >green</ion-option>
+      <ion-option value="danger" > red</ion-option>
+      <ion-option value="light" >Light</ion-option>
+      <ion-option value="dark" >black</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <button item-end ion-button (click)="uploadItems(goals,period,timeStarts,timeEnds,excolor)"> Save </button>
+
+
+
+
+</ion-content>

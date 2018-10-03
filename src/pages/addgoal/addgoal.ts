@@ -1,4 +1,5 @@
-import { AdditemPage } from './../additem/additem';
+import { ExercisePage } from './../exercise/exercise';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -22,10 +23,8 @@ export class AddgoalPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddgoalPage');
   }
-
-
-  goToOtherPage(){
-    this.navCtrl.push(AdditemPage);
+  gotoExercisePage(){
+    this.navCtrl.push(ExercisePage);
   }
 
 }
