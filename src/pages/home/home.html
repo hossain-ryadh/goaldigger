@@ -9,29 +9,56 @@
 
 
 <ion-item-divider color="{{ (exdata | async )?.excolor }}"  class="excss-image" >
-  <ion-item> Exercise </ion-item>
-  <ion-item>{{ (exdata | async )?.goals }} </ion-item>
-  <ion-item>{{ (exdata | async )?.period }} </ion-item>
-  <ion-item>{{ (exdata | async )?.timeStarts }}</ion-item>
-  <ion-item>{{ (exdata | async )?.timeEnds }} </ion-item>
+
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/exavt.png">
+        </ion-avatar>
+        <p style="font-weight: bold; font-size: 30px; color: rgb(0, 0, 0);" absolute-drag>Exercise</p>
+
+      </ion-item>
+
+
+
+  <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Consistency</p>
+    {{ (exdata | async )?.goals }} </ion-item>
+  <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Accomplishment</p>{{ (exdata | async )?.period }} </ion-item>
+  <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Start Date</p>{{ (exdata | async )?.timeStarts }}</ion-item>
+  <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal End Date</p>{{ (exdata | async )?.timeEnds }} </ion-item>
 </ion-item-divider>
 
 
 
 <ion-item-divider color="{{ (stdata | async )?.stcolor }}"  >
-  <ion-item> Study </ion-item>
-  <ion-item>Times   {{ (stdata | async )?.goals }} </ion-item>
-  <ion-item>{{ (stdata | async )?.period }} </ion-item>
-  <ion-item>{{ (stdata | async )?.timeStarts }}</ion-item>
-  <ion-item>{{ (stdata | async )?.timeEnds }} </ion-item>
-</ion-item-divider>
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/studyavt.png">
+        </ion-avatar>
+        <p style="font-weight: bold; font-size: 30px; color: rgb(0, 0, 0);" absolute-drag>Study</p>
+
+      </ion-item>
+
+    <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Consistency</p>
+      {{ (exdata | async )?.goals }} </ion-item>
+    <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Accomplishment</p>{{ (stdata | async )?.period }} </ion-item>
+    <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Start Date</p>{{ (stdata | async )?.timeStarts }}</ion-item>
+    <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal End Date</p>{{ (stdata | async )?.timeEnds }} </ion-item>
+  </ion-item-divider>
 
 <ion-item-divider color="{{ (drdata | async )?.drcolor }}"  >
-    <ion-item> Drink </ion-item>
-    <ion-item>Times   {{ (drdata | async )?.goals }} </ion-item>
-    <ion-item>{{ (drdata | async )?.period }} </ion-item>
-    <ion-item>{{ (drdata | async )?.timeStarts }}</ion-item>
-    <ion-item>{{ (drdata | async )?.timeEnds }} </ion-item>
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/drinkavt.png">
+        </ion-avatar>
+        <p style="font-weight: bold; font-size: 30px; color: rgb(0, 0, 0);" absolute-drag>Drink Water</p>
+
+      </ion-item>
+
+    <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Consistency</p>
+      {{ (exdata | async )?.goals }} </ion-item>
+    <ion-item> <p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Accomplishment</p>{{ (drdata | async )?.period }} </ion-item>
+    <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal Start Date</p>{{ (drdata | async )?.timeStarts }}</ion-item>
+    <ion-item><p style="font-weight: bold; font-size: 20px; color: rgb(7, 110, 141);" absolute-drag>Goal End Date</p>{{ (drdata | async )?.timeEnds }} </ion-item>
   </ion-item-divider>
 
 
