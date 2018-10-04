@@ -5,14 +5,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-<ion-item-divider color="{{ (exdata | async )?.excolor }}"  >
+<ion-content class="bg-image" padding>
+
+
+<ion-item-divider color="{{ (exdata | async )?.excolor }}"  class="excss-image" >
   <ion-item> Exercise </ion-item>
   <ion-item>{{ (exdata | async )?.goals }} </ion-item>
   <ion-item>{{ (exdata | async )?.period }} </ion-item>
   <ion-item>{{ (exdata | async )?.timeStarts }}</ion-item>
   <ion-item>{{ (exdata | async )?.timeEnds }} </ion-item>
 </ion-item-divider>
+
+
 
 <ion-item-divider color="{{ (stdata | async )?.stcolor }}"  >
   <ion-item> Study </ion-item>
