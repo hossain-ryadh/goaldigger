@@ -1,5 +1,7 @@
 
 
+
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -13,6 +15,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ExercisePage } from './../pages/exercise/exercise';
 import { DrinkPage } from './../pages/drink/drink';
 import { StudyPage } from './../pages/study/study';
+import { CallPage } from './../pages/call/call';
+import { MoneyPage } from './../pages/money/money';
 import { AdditemPage } from './../pages/additem/additem';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
@@ -50,6 +54,8 @@ const config = {
     ExercisePage,
     StudyPage,
     DrinkPage,
+    CallPage,
+    MoneyPage,
 
   ],
   imports: [
@@ -74,6 +80,8 @@ const config = {
     ExercisePage,
     StudyPage,
     DrinkPage,
+    CallPage,
+    MoneyPage,
 
   ],
   providers: [

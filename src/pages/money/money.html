@@ -1,0 +1,69 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Save Money for Tourism</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+  <ion-content padding>
+    <ion-list>
+      <p>  My goal is at least</p>
+        <ion-item>
+
+          <ion-label>Times</ion-label>
+          <ion-select [(ngModel)]="money.goals">
+            <ion-option value="1 times">1 times</ion-option>
+            <ion-option value="2 times">2 times</ion-option>
+            <ion-option value="3 times">3 times</ion-option>
+            <ion-option value="4 times">4 times</ion-option>
+            <ion-option value="5 times">5 times</ion-option>
+            <ion-option value="6 times">6 times</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+    <ion-list>
+        <ion-item>
+          <ion-label>Set Goal Period</ion-label>
+          <ion-select [(ngModel)]="money.period">
+            <ion-option value="Daily">per day</ion-option>
+            <ion-option value="Weekly">per week</ion-option>
+            <ion-option value="Monthly">per month</ion-option>
+
+          </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Start Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="money.timeStarts"></ion-datetime>
+          </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+          <ion-label>End Time</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="money.timeEnds"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <ion-label>Select Goal Color</ion-label>
+      <ion-select [(ngModel)]="money.mocolor" multiple="false" >
+        <ion-option value="primary" >blue</ion-option>
+        <ion-option value="secondary" >green</ion-option>
+        <ion-option value="danger" > red</ion-option>
+        <ion-option value="light" >Light</ion-option>
+        <ion-option value="dark" >black</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <button ion-button full (click)="uploadItems(); dismiss()"> Save </button>
+
+
+
+
+  </ion-content>

@@ -8,39 +8,48 @@
 
 <ion-content class="addgcss-image" padding>
   <ion-list >
-    <ion-item>
-        Exercise
+    <ion-item> <ion-avatar item-start>
+      <img src="../../assets/imgs/exavt.png">
+    </ion-avatar>
+    <p style="font-weight: bold; font-size: 20px; color: rgb(0, 0, 0);" absolute-drag>Exercise</p>
+
       <button item-end ion-button (click)="exercise()">
         add your goal
       </button>
     </ion-item>
     <ion-item>
-        Study
+        <ion-avatar item-start>
+            <img src="../../assets/imgs/studyavt.png">
+          </ion-avatar>
+          <p style="font-weight: bold; font-size: 20px; color: rgb(0, 0, 0);" absolute-drag>Study</p>
         <button item-end ion-button (click)="study()">
         add your goal
       </button>
     </ion-item>
     <ion-item>
-        Drink Water
+        <ion-avatar item-start>
+            <img src="../../assets/imgs/drinkavt.png">
+          </ion-avatar>
+          <p style="font-weight: bold; font-size: 20px; color: rgb(0, 0, 0);" absolute-drag>Drink Water</p>
         <button item-end ion-button (click)="drink()">
         add your goal
       </button>
     </ion-item>
     <ion-item>
-       Get up early
-      <button item-end ion-button >
+        <ion-avatar item-start>
+            <img src="../../assets/imgs/callavt.jpg">
+          </ion-avatar>
+          <p style="font-weight: bold; font-size: 20px; color: rgb(0, 0, 0);" absolute-drag>Call A Friend</p>
+          <button item-end ion-button (click)="call()">
         add your goal
       </button>
     </ion-item>
     <ion-item>
-        Sleep
-      <button item-end ion-button >
-        add your goal
-      </button>
-    </ion-item>
-    <ion-item>
-        Reading
-      <button item-end ion-button >
+        <ion-avatar item-start>
+            <img src="../../assets/imgs/saveavt.svg">
+          </ion-avatar>
+          <p style="font-weight: bold; font-size: 20px; color: rgb(0, 0, 0);" absolute-drag>Save for Tourism</p>
+          <button item-end ion-button (click)="money()">
         add your goal
       </button>
     </ion-item>
