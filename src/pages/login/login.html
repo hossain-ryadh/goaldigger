@@ -1,27 +1,77 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>Log In</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
 
-<ion-content class="login-image" padding>
-<h1>Welcome to Goal Digger App</h1>
-<p>Please sign up or sign in to continue</p>
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong style="font-weight: bold; font-size: 50px; color: rgb(207, 0, 28);" absolute-drag> Goal Digger</strong>
+      </h2>
+    </div>
 
-<ion-list>
+    <!-- Login form -->
+    <form class="list-form">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </form>
 
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <button ion-button outline (click)="login()">sign in</button>
-  </ion-list>
+    <p text-right ion-text color="secondary" ><strong>Forgot Password?</strong></p>
 
+    <div>
+      <button ion-button icon-start block color="dark" tappable (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
+        SIGN IN
+      </button>
+
+      <p text-center ion-text color="secondary">Or Sign in with:</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-gplus">
+              <ion-icon name="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="secondary">New here? <strong>Sign up</strong></span>
+    </div>
+
+  </div>
 </ion-content>
