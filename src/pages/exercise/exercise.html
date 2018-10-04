@@ -37,14 +37,14 @@
   <ion-list>
       <ion-item>
           <ion-label>Start Time</ion-label>
-          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="exercise.timeStarts"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="exercise.timeStarts"></ion-datetime>
         </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-item>
         <ion-label>End Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="exercise.timeEnds"></ion-datetime>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="exercise.timeEnds"></ion-datetime>
       </ion-item>
   </ion-list>
 
@@ -60,7 +60,7 @@
   </ion-item>
 
 
-  <button item-end ion-button (click)="uploadItems(); dismiss()"> Save </button>
+  <button ion-button full (click)="uploadItems(); dismiss()"> Save </button>
 
 
 
