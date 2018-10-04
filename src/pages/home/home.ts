@@ -11,17 +11,24 @@ import { Observable } from 'rxjs';
 })
 export class HomePage {
 
-  itemsData: Observable<any>;
+  exdata: Observable<any>;
+  stdata: Observable<any>;
+  drdata: Observable<any>;
 
   constructor(public navCtrl: NavController,
     private database:  AngularFireDatabase) {
 
   }
   ionViewDidLoad(){
-    this.itemsData = this.database.object(`/items/topics`).valueChanges();
+    this.exdata = this.database.object(`/items/topics/ex`).valueChanges();
+    this.stdata = this.database.object(`/items/topics/st`).valueChanges();
+    this.drdata = this.database.object(`/items/topics/dr`).valueChanges();
   }
   ionViewWillEnter(){
-    this.itemsData = this.database.object(`/items/topics`).valueChanges();
+    this.exdata = this.database.object(`/items/topics/ex`).valueChanges();
+    this.stdata = this.database.object(`/items/topics/st`).valueChanges();
+    this.drdata = this.database.object(`/items/topics/dr`).valueChanges();
   }
+
 
 }

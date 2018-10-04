@@ -1,5 +1,5 @@
 
-import { Exercise } from './exercise.model';
+import { drink } from './drink.model';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
@@ -8,12 +8,12 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 
 @IonicPage()
 @Component({
-  selector: 'page-exercise',
-  templateUrl: 'exercise.html',
+  selector: 'page-drink',
+  templateUrl: 'drink.html',
 })
-export class ExercisePage {
+export class DrinkPage {
 
-  exercise  = {} as Exercise;
+  drink  = {} as drink;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -23,11 +23,11 @@ export class ExercisePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExercisePage');
+    console.log('ionViewDidLoad drinkPage');
   }
 
-  uploadItems(exercise){
-    this.database.object(`/items/topics/ex`).set(this.exercise);
+  uploadItems(drink){
+    this.database.object(`/items/topics/dr`).set(this.drink);
   }
   dismiss(){
     this.viewCtrl.dismiss();

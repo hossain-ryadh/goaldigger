@@ -1,14 +1,10 @@
 import { ExercisePage } from './../exercise/exercise';
-
+import { StudyPage } from './../study/study';
+import { DrinkPage } from './../drink/drink';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the AddgoalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -23,8 +19,13 @@ export class AddgoalPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddgoalPage');
   }
-  gotoExercisePage(){
+  exercise(){
     this.navCtrl.push(ExercisePage);
   }
-
+  study(){
+    this.navCtrl.push(StudyPage);
+  }
+  drink(){
+    this.navCtrl.push(DrinkPage);
+  }
 }

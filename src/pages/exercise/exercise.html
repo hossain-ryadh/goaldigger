@@ -6,11 +6,12 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <ion-list>
+    <p>  My goal is at least</p>
       <ion-item>
-        <ion-label>Goals</ion-label>
+
+        <ion-label>Times</ion-label>
         <ion-select [(ngModel)]="exercise.goals">
           <ion-option value="1">1 times</ion-option>
           <ion-option value="2">2 times</ion-option>
@@ -24,7 +25,7 @@
 
   <ion-list>
       <ion-item>
-        <ion-label>Time Period</ion-label>
+        <ion-label>Set Goal Period</ion-label>
         <ion-select [(ngModel)]="exercise.period">
           <ion-option value="1">per day</ion-option>
           <ion-option value="2">per week</ion-option>
@@ -36,7 +37,7 @@
 
   <ion-list>
       <ion-item>
-          <ion-label>Start Time</ion-label>
+          <ion-label>Start Date</ion-label>
           <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="exercise.timeStarts"></ion-datetime>
         </ion-item>
   </ion-list>
@@ -49,7 +50,7 @@
   </ion-list>
 
   <ion-item>
-    <ion-label>Select Color</ion-label>
+    <ion-label>Select Goal Color</ion-label>
     <ion-select [(ngModel)]="exercise.excolor" multiple="false" >
       <ion-option value="primary" >blue</ion-option>
       <ion-option value="secondary" >green</ion-option>

@@ -6,13 +6,29 @@
 </ion-header>
 
 <ion-content padding>
-<ion-item-divider color="{{ (itemsData | async )?.excolor }}"  >
+<ion-item-divider color="{{ (exdata | async )?.excolor }}"  >
   <ion-item> Exercise </ion-item>
-  <ion-item>{{ (itemsData | async )?.goals }} </ion-item>
-  <ion-item>{{ (itemsData | async )?.period }} </ion-item>
-  <ion-item>{{ (itemsData | async )?.timeStarts }}</ion-item>
-  <ion-item>{{ (itemsData | async )?.timeEnds }} </ion-item>
+  <ion-item>{{ (exdata | async )?.goals }} </ion-item>
+  <ion-item>{{ (exdata | async )?.period }} </ion-item>
+  <ion-item>{{ (exdata | async )?.timeStarts }}</ion-item>
+  <ion-item>{{ (exdata | async )?.timeEnds }} </ion-item>
 </ion-item-divider>
+
+<ion-item-divider color="{{ (stdata | async )?.stcolor }}"  >
+  <ion-item> Study </ion-item>
+  <ion-item>Times   {{ (stdata | async )?.goals }} </ion-item>
+  <ion-item>{{ (stdata | async )?.period }} </ion-item>
+  <ion-item>{{ (stdata | async )?.timeStarts }}</ion-item>
+  <ion-item>{{ (stdata | async )?.timeEnds }} </ion-item>
+</ion-item-divider>
+
+<ion-item-divider color="{{ (drdata | async )?.drcolor }}"  >
+    <ion-item> Drink </ion-item>
+    <ion-item>Times   {{ (drdata | async )?.goals }} </ion-item>
+    <ion-item>{{ (drdata | async )?.period }} </ion-item>
+    <ion-item>{{ (drdata | async )?.timeStarts }}</ion-item>
+    <ion-item>{{ (drdata | async )?.timeEnds }} </ion-item>
+  </ion-item-divider>
 
 
 </ion-content>
