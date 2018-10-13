@@ -1,10 +1,9 @@
 
 
 
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
-
+import {RegistrationPage} from './../pages/registration/registration';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -22,7 +21,7 @@ import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { AddgoalPage } from './../pages/addgoal/addgoal';
 import { ContactPage } from '../pages/contact/contact';
-
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -56,11 +55,14 @@ const config = {
     DrinkPage,
     CallPage,
     MoneyPage,
+    RegistrationPage,
 
   ],
   imports: [
+
     BrowserModule,
     AngularFireModule,
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config)
@@ -71,6 +73,7 @@ const config = {
     MyApp,
     AboutPage,
     LoginPage,
+    RegistrationPage,
     AddgoalPage,
     ContactPage,
     HomePage,
@@ -88,7 +91,6 @@ const config = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireDatabase
   ]
 })
 export class AppModule {}

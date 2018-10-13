@@ -1,12 +1,9 @@
+import { AngularFireAuth } from 'angularfire2/auth';
+import { User } from '../login/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the RegistrationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,11 +12,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistrationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {} as User;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private afAuth:  AngularFireAuth) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistrationPage');
+
+  async register(user: User){
+    try{
+        const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+    } catch(e) {
+      console.error(e);
+    }
   }
+
 
 }
