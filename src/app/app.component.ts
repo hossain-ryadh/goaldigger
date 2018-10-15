@@ -4,7 +4,6 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { timer } from 'rxjs/observable/timer';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { timer } from 'rxjs/observable/timer';
 })
 export class MyApp {
   rootPage:any = LoginPage;
-  showSplash = true;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -21,7 +20,6 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      timer(3000).subscribe( () => this.showSplash = false )
     });
   }
 }
