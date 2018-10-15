@@ -1,6 +1,7 @@
+import { RegistrationPage } from './../registration/registration';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {User} from './user'
- // import { RegisterPage } from './../register/register';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
@@ -34,7 +35,7 @@ export class LoginPage {
     }
   }
   register(){
-   // this.navCtrl.push(RegisterPage);
+    this.navCtrl.push(RegistrationPage);
   }
 
 
