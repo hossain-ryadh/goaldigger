@@ -1,3 +1,4 @@
+import { TabsPage } from './../tabs/tabs';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../login/user';
 import { Component } from '@angular/core';
@@ -21,9 +22,13 @@ export class RegistrationPage {
   async register(user: User){
     try{
         const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
-    } catch(e) {
+        if (result){
+          this.navCtrl.setRoot(TabsPage);
+        }
+      } catch(e) {
       console.error(e);
     }
+
   }
 
 
